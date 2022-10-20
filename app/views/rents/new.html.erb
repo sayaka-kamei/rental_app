@@ -1,0 +1,35 @@
+<%= form_with(model: @rent, local: true) do |form| %>
+
+  <table>
+    <tr> <td><h2>物件登録</h2></td></tr>
+    <tr><td><label for="name">物件名</label></td></tr>
+    <tr><td><%= form.text_field :name %></td></tr>
+    <tr><td><label for="price">賃料</label></td></tr>
+    <tr><td><%= form.text_field :price %>円</td></tr>
+    <tr><td><label for="address">住所</label></td></tr>
+    <tr><td><%= form.text_field :address %></td></tr>
+    <tr><td><label for="age">築年数</label></td></tr>
+    <tr><td><%= form.text_field :age %></td></tr>
+    <tr><td><label for="remarks">備考</label></td></tr>
+    <tr><td><%= form.text_area :remarks%></td></tr>
+    <tr><td><hr width="1000"></td></tr>
+
+    <tr> <td><h4>最寄り駅1</h4></td></tr>
+    <tr><td><label for="route1">路線名</label></td></tr>
+    <tr><td><%= form.text_field :route1 %></td></tr>
+    <tr><td><label for="station1">駅名</label></td></tr>
+    <tr><td><%= form.text_field :station1 %></td></tr>
+    <tr><td><label for="time1">徒歩分数</label></td></tr>
+    <tr><td><%= form.text_field :time1 %></td></tr>
+
+    <tr> <td><h4>最寄り駅2</h4></td></tr>
+    <tr><td><label for="route2">路線名</label></td></tr>
+    <tr><td><%= form.text_field :route2 %></td></tr>
+    <tr><td><label for="station2">駅名</label></td></tr>
+    <tr><td><%= form.text_field :station2 %></td></tr>
+    <tr><td><label for="time2">徒歩分数</label></td></tr>
+    <tr><td><%= form.text_field :time2 %></td></tr>
+
+  </table>
+  <%= form.submit "登録する"%>
+<% end %>
